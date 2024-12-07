@@ -1,0 +1,43 @@
+        read/write        pointer
+r-      read                  start
+r+-      read&Write           start
+w-        write             start\end
+w+-       write and read
+a-         write
+a-       write
+a+-        write &read
+
+in r, r+ any other filw if opened will give error
+if opend in w mode/...it will overwrte all content and clear it 
+in w mode if new file name not existing is written it will make new one same in a, a+
+w+ is readle but since pointer is at end itll not print
+a appends
+print(f.name)
+print(f.mode)
+print(f.closed)
+print(f.readable())
+print(f.writable())
+f.close()
+
+write-
+f.write('String)
+f.writelines(['String\n','String\n'])
+print(f.readlines()) ans in list
+
+read-
+f.read(count)
+f.read(hint)
+f.readlines(Size)
+
+f=open('ababa.txt','r')
+for i,j in enumerate(f):
+    print(i,'>',j)
+
+f=open('ababa.txt','r')
+for i,j in enumerate(f,start=1):
+    print(i,'>',j)
+
+f=open('ababa.txt','r')
+r=f.read()
+for i in r:
+    print(i)
